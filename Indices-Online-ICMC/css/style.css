@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	background: #000;
+	overflow: hidden;
+	font-size: 0.85rem;
+}
+
+img {
+ display: flex;
+ margin-left: auto;
+ margin-right: auto;
+ width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #333;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+
+/* Content */
+.content {
+	padding: 3em 0;
+}
+
+.content.main {
+	min-height: 100vh;
+	padding: 0;
+}
+
+.canvas-wrapper {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+
+
+canvas {
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	-webkit-transform: translate(0%, 0%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+}
+
+/* Buton was 2vmax from bottom and no left position was given*/
+.toggle-btn {
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: currentColor;
+	position: absolute;
+	border: 1px solid;
+	width: 10vmax;
+}
+
+/*removed right: 40vmax; */
+.toggle-btn {
+	background: transparent;
+	color: currentColor;
+	bottom: 5%;
+	margin-left: 45vmax;
+
+}
+
+.toggle-btn:focus {
+	outline: none;
+}
+
+.toggle-btn:hover {
+	color: #fff;
+}
+
+.txt-note {
+	padding: 10px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	color: currentColor;
+	position: fixed;
+	text-align:left;
+	border: 1px solid;
+	width: 75vmax;
+}
+
+
+.txt-note {
+	background: transparent;
+	color: currentColor;
+	top: 10%;
+	margin-left: 12.5vmax;
+	margin-bottom: 5.5vmax;
+	clear: both;
+
+
+}
+
+.txt-note:focus {
+	outline: none;
+}
+
+.txt-note:hover {
+	color: #fff;
+}
+
+.att {
+	text-align: right;
+}
+
+
+@media screen and (max-width: 55em) {
+
+
+	.toggle-btn {
+		right: 10px;
+		bottom: 10px;
+		width: calc(100% - 20px);
+	}
+
+	.txt-note {
+		 visibility: visible;
+		 position: absolute;
+		 width:  calc(100% - 20px);
+		 max-height: 27vmax;
+		 overflow: scroll;
+		 right: 10px;
+ 		 top: 10px;
+		 letter-spacing: 0.05em;
+		 text-align:left;
+		 clear: both;
+	 }
+
+}
